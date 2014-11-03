@@ -14,7 +14,7 @@
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) WebWindowController *windowController;
+@property (nonatomic) WebWindowController *windowController;
 
 @end
 
