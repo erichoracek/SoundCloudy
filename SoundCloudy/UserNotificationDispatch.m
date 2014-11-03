@@ -86,12 +86,12 @@ static const char _showsButtons [] = {0x5F, 0x73, 0x68, 0x6F, 0x77, 0x73, 0x42, 
 - (void)userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification
 {
     // Contains a track info object
-    if (notification.userInfo[UserNotificationUserInfoTrackKey]) {
-        // Has the "skip" button clicked
+    if (!notification.userInfo[UserNotificationUserInfoTrackKey]) {
+        // "Skip" button clicked
         if (notification.activationType == NSUserNotificationActivationTypeActionButtonClicked) {
             [(RACSubject *)self.skipTrackSignal sendNext:nil];
         }
-        // Has the rest of the notification clicked
+        // Rest of the notification clicked
         else {
             [(RACSubject *)self.viewTrackSignal sendNext:nil];
         }
