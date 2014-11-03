@@ -110,7 +110,7 @@
 				3AC1EE9E1A06F3FB00D762F2 /* WebKit.framework */,
 				3AC1EE7D1A06F0DA00D762F2 /* SoundCloudy */,
 				3AC1EE911A06F0DB00D762F2 /* SoundCloudyTests */,
-				3AC1EEB01A070F9000D762F2 /* SPMediaKeyTap */,
+				3AD1EED31A077CEC00806C01 /* Vendor */,
 				3AC1EE7C1A06F0DA00D762F2 /* Products */,
 				24FD4B0ABD58B63B539E24D3 /* Pods */,
 				EEF0C97ACE1CC5575DD36753 /* Frameworks */,
@@ -199,6 +199,14 @@
 			);
 			name = SPInvocationGrabbing;
 			path = Vendor/SPMediaKeyTap/SPInvocationGrabbing;
+			sourceTree = "<group>";
+		};
+		3AD1EED31A077CEC00806C01 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1EEB01A070F9000D762F2 /* SPMediaKeyTap */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 		EEF0C97ACE1CC5575DD36753 /* Frameworks */ = {
