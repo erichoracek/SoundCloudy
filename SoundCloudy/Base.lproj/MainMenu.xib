@@ -299,6 +299,17 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="View" id="HyV-fh-RgO">
                         <items>
+                            <menuItem title="Go to Current Track" keyEquivalent="l" id="FHm-SO-kxv">
+                                <connections>
+                                    <action selector="goToCurrentTrack:" target="Voe-Tx-rLC" id="YY1-3k-Bqo"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Reload" keyEquivalent="r" id="OcD-RX-fpP">
+                                <connections>
+                                    <action selector="reload:" target="Voe-Tx-rLC" id="iM6-Ef-B1s"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="rcc-st-uVO"/>
                             <menuItem title="Show Toolbar" keyEquivalent="t" id="snW-S8-Cw5">
                                 <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
                                 <connections>
@@ -330,6 +341,12 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="SoundCloudy" keyEquivalent="1" id="HHV-B1-Z4k">
+                                <connections>
+                                    <action selector="showMainWindow:" target="Voe-Tx-rLC" id="N1G-6c-zY3"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="i8G-j5-cbA"/>
                             <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
@@ -345,7 +362,7 @@
                         <items>
                             <menuItem title="SoundCloudy Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                 <connections>
-                                    <action selector="showHelp:" target="-1" id="y7X-2Q-9no"/>
+                                    <action selector="help:" target="Voe-Tx-rLC" id="OaJ-iL-pJN"/>
                                 </connections>
                             </menuItem>
                         </items>

@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "WebWindowController.h"
+#import "WebViewController.h"
+#import "WKWebView+SoundCloud.h"
 #import "NSURL+SoundCloud.h"
 
 @interface AppDelegate ()
@@ -28,6 +30,28 @@
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
     
+}
+
+#pragma mark - Menu Items
+
+- (IBAction)help:(id)sender
+{
+    [self.windowController.webViewController.view help];
+}
+
+- (IBAction)reload:(id)sender
+{
+    [self.windowController.webViewController.view reload];
+}
+
+- (IBAction)goToCurrentTrack:(id)sender
+{
+    [self.windowController.webViewController.view scrollToCurrentTrack];
+}
+
+- (IBAction)showMainWindow:(id)sender
+{
+    [self.windowController showWindow:sender];
 }
 
 @end
