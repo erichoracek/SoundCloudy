@@ -245,6 +245,7 @@
 				TargetAttributes = {
 					3AC1EE7A1A06F0DA00D762F2 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = KKZ776QB38;
 					};
 					3AC1EE8D1A06F0DB00D762F2 = {
 						CreatedOnToolsVersion = 6.1;
@@ -452,10 +453,12 @@
 			baseConfigurationReference = ACA80D07456FA5BA46CD167A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer: Eric Horacek (BZNCHLFN5Y)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SoundCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -464,10 +467,12 @@
 			baseConfigurationReference = 4399309A454A4BC59E8D8879 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer: Eric Horacek (BZNCHLFN5Y)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SoundCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
