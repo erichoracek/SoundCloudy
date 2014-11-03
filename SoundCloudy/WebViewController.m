@@ -13,8 +13,9 @@
 #import "MediaKeys.h"
 #import "SoundCloudTrackInfo.h"
 #import "UserNotificationDispatch.h"
+#import "NSURL+SoundCloud.h"
 
-@interface WebViewController ()
+@interface WebViewController () <WKNavigationDelegate>
 
 @property (nonatomic, readwrite) NSURLRequest *request;
 @property (nonatomic) UserNotificationDispatch *userNotificationDispatch;
@@ -35,6 +36,7 @@
 {
     [super viewDidLoad];
     self.view.allowsBackForwardNavigationGestures = YES;
+    self.view.navigationDelegate = self;
     [self bindMediaKeys:[MediaKeys sharedInstance] toWebView:self.view];
     [self bindUserNotificationDispatch:self.userNotificationDispatch toWebView:self.view];
     [self.view loadRequest:self.request];
@@ -81,6 +83,18 @@
         self.userNotificationDispatch = [[UserNotificationDispatch alloc] initWithTrackInfoSignal:self.view.trackInfoSignal notificationCenter:center];
     }
     return _userNotificationDispatch;
+}
+
+#pragma mark - WebViewController <WKNavigationDelegate>
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler
+{
+    if (!navigationAction.targetFrame || !navigationAction.request.URL.isOnSoundCloudDomain) {
+        [[NSWorkspace sharedWorkspace] openURL:navigationAction.request.URL];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    } else {
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
 }
 
 @end
