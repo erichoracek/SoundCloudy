@@ -24,7 +24,6 @@ static NSString * const SoundCloudKeydownJavaScript = @"\
     document.dispatchEvent(event);\
 ";
 
-
 @implementation WKWebView (SoundCloud)
 
 #pragma mark Public
