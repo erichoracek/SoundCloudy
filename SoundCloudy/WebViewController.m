@@ -12,11 +12,15 @@
 #import "SpaceKeySignal.h"
 #import "WKWebView+SoundCloud.h"
 #import "MediaKeys.h"
+#import "SoundCloudTrackInfo.h"
+#import "UserNotificationDispatch.h"
 
 @interface WebViewController ()
 
 @property (nonatomic, readwrite) NSURLRequest *request;
 @property (nonatomic) SpaceKeySignal *spaceKeySignal;
+@property (nonatomic) UserNotificationDispatch *userNotificationDispatch;
+
 
 @end
 
@@ -35,15 +39,8 @@
     [super viewDidLoad];
     self.view.allowsBackForwardNavigationGestures = YES;
     [self bindMediaKeys:[MediaKeys sharedInstance] toWebView:self.view];
+    [self bindUserNotificationDispatch:self.userNotificationDispatch toWebView:self.view];
     [self.view loadRequest:self.request];
-    
-    [self.view.isSoundCloudURLSignal subscribeNext:^(id x) {
-        NSLog(@"is sound cloud %@", x);
-    }];
-    
-    [self.view.isPlayingSignal subscribeNext:^(id x) {
-        NSLog(@"is playing %@", x);
-    }];
 }
 
 #pragma mark - WebViewController
@@ -68,6 +65,25 @@
     [mediaKeys.prevKeySignal subscribeNext:^(id x) {
         [webView prev];
     }];
+}
+
+- (void)bindUserNotificationDispatch:(UserNotificationDispatch *)userNotificationDispatch toWebView:(WKWebView *)webView
+{
+    [userNotificationDispatch.skipTrackSignal subscribeNext:^(id x) {
+        [webView next];
+    }];
+    [userNotificationDispatch.viewTrackSignal subscribeNext:^(id x) {
+        [webView scrollToCurrentTrack];
+    }];
+}
+
+- (UserNotificationDispatch *)userNotificationDispatch
+{
+    if (!_userNotificationDispatch) {
+        NSUserNotificationCenter *center = [NSUserNotificationCenter defaultUserNotificationCenter];
+        self.userNotificationDispatch = [[UserNotificationDispatch alloc] initWithTrackInfoSignal:self.view.trackInfoSignal notificationCenter:center];
+    }
+    return _userNotificationDispatch;
 }
 
 @end

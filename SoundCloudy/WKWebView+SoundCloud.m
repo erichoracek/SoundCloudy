@@ -8,12 +8,14 @@
 
 #import <objc/runtime.h>
 #import "WKWebView+SoundCloud.h"
+#import "SoundCloudTrackInfo.h"
 
 typedef NS_ENUM(NSInteger, SoundCloudKeyCode) {
-    SoundCloudKeyCodeNext = 74,
-    SoundCloudKeyCodePrev = 75,
-    SoundCloudKeyCodePlay = 32,
-    SoundCloudKeyCodeHelp = 72
+    SoundCloudKeyCodeNext = 74, // J
+    SoundCloudKeyCodePrev = 75, // K
+    SoundCloudKeyCodePlay = 32, // Space
+    SoundCloudKeyCodeHelp = 72, // H
+    SoundCloudKeyCodeScrollToCurrentTrack = 80 // P
 };
 
 static NSString * const SoundCloudKeydownJavaScript = @"\
@@ -22,11 +24,12 @@ static NSString * const SoundCloudKeydownJavaScript = @"\
     document.dispatchEvent(event);\
 ";
 
+
 @implementation WKWebView (SoundCloud)
 
 #pragma mark Public
 
-static NSString * const SoundCloudTitleIsPlayingCharacter = @"▶";
+static NSString * const SoundCloudTitleIsPlayingString = @"▶ ";
 
 - (RACSignal *)isPlayingSignal
 {
@@ -35,7 +38,7 @@ static NSString * const SoundCloudTitleIsPlayingCharacter = @"▶";
         signal = [RACSignal combineLatest:@[RACObserve(self, title), self.isSoundCloudURLSignal] reduce:^id(NSString *title, NSNumber *isSoundCloudURL){
             return @(
                 [isSoundCloudURL boolValue]
-                && ([title rangeOfString:SoundCloudTitleIsPlayingCharacter].location != NSNotFound)
+                && ([title rangeOfString:SoundCloudTitleIsPlayingString].location != NSNotFound)
             );
         }];
         objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -51,6 +54,48 @@ static NSString * const SoundCloudHost = @"soundcloud.com";
     if (!signal) {
         signal = [RACObserve(self, URL) map:^id(NSURL *URL) {
             return @([URL.host rangeOfString:SoundCloudHost].location != NSNotFound);
+        }];
+        objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    return signal;
+}
+
+- (RACSignal *)artistNameSignal
+{
+    return nil;
+}
+
+static NSString * const SoundCloudSingleTrackArtistSeparatorString = @" by ";
+static NSString * const SoundCloudPlaylistSeparatorString = @" in ";
+
+- (RACSignal *)trackInfoSignal
+{
+    RACSignal *signal = objc_getAssociatedObject(self, _cmd);
+    if (!signal) {
+        signal = [RACSignal combineLatest:@[RACObserve(self, title), self.isPlayingSignal] reduce:^id(NSString *title, NSNumber *isPlaying){
+            if (!isPlaying) {
+                return nil;
+            }
+            title = [title stringByReplacingOccurrencesOfString:SoundCloudTitleIsPlayingString withString:@""];
+            // Single Track
+            if ([title rangeOfString:SoundCloudSingleTrackArtistSeparatorString].location != NSNotFound) {
+                NSArray *components = [title componentsSeparatedByString:SoundCloudSingleTrackArtistSeparatorString];
+                SoundCloudTrackInfo *trackInfo = [SoundCloudTrackInfo new];
+                trackInfo.type = SoundCloudTrackInfoTypeTrack;
+                trackInfo.trackName = [components firstObject];
+                trackInfo.artistName = [components lastObject];
+                return trackInfo;
+            }
+            // Playlist
+            if ([title rangeOfString:SoundCloudPlaylistSeparatorString].location != NSNotFound) {
+                NSArray *components = [title componentsSeparatedByString:SoundCloudPlaylistSeparatorString];
+                SoundCloudTrackInfo *trackInfo = [SoundCloudTrackInfo new];
+                trackInfo.type = SoundCloudTrackInfoTypePlaylist;
+                trackInfo.trackName = [components firstObject];
+                trackInfo.playlistName = [components lastObject];
+                return trackInfo;
+            }
+            return nil;
         }];
         objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
@@ -75,6 +120,11 @@ static NSString * const SoundCloudHost = @"soundcloud.com";
 - (void)help
 {
     [self evaluateJavaScriptForKeyCode:SoundCloudKeyCodeHelp];
+}
+
+- (void)scrollToCurrentTrack
+{
+    [self evaluateJavaScriptForKeyCode:SoundCloudKeyCodeScrollToCurrentTrack];
 }
 
 #pragma mark Private

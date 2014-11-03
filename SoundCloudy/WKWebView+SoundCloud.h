@@ -13,10 +13,12 @@
 
 @property (nonatomic, readonly) RACSignal *isPlayingSignal;
 @property (nonatomic, readonly) RACSignal *isSoundCloudURLSignal;
+@property (nonatomic, readonly) RACSignal *trackInfoSignal;
 
 - (void)play;
 - (void)next;
 - (void)prev;
 - (void)help;
+- (void)scrollToCurrentTrack;
 
 @end
