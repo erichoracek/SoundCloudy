@@ -470,7 +470,7 @@
 				INFOPLIST_FILE = SoundCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "18b495b8-8322-4bda-90b2-94c4e1a4ffac";
 			};
 			name = Debug;
 		};
@@ -484,7 +484,7 @@
 				INFOPLIST_FILE = SoundCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "18b495b8-8322-4bda-90b2-94c4e1a4ffac";
 			};
 			name = Release;
 		};
