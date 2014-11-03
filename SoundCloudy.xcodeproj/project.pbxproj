@@ -20,6 +20,7 @@
 		3AC1EEAF1A070F1500D762F2 /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEB21A0719D800D762F2 /* MediaKeys.m */; };
 		3AC1EEC11A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3AC1EEC41A07249500D762F2 /* WKWebView+SoundCloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEC31A07249500D762F2 /* WKWebView+SoundCloud.m */; };
 		B3A73C21CAC39B4361F1427E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 815BA2C5C15D3A2C0389F8E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		3AC1EEB21A0719D800D762F2 /* MediaKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaKeys.m; sourceTree = "<group>"; };
 		3AC1EEBC1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPInvocationGrabbing.h"; sourceTree = "<group>"; };
 		3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPInvocationGrabbing.m"; sourceTree = "<group>"; };
+		3AC1EEC21A07249500D762F2 /* WKWebView+SoundCloud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+SoundCloud.h"; sourceTree = "<group>"; };
+		3AC1EEC31A07249500D762F2 /* WKWebView+SoundCloud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+SoundCloud.m"; sourceTree = "<group>"; };
 		4399309A454A4BC59E8D8879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		815BA2C5C15D3A2C0389F8E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA80D07456FA5BA46CD167A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 				3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */,
 				3AC1EEB11A0719D800D762F2 /* MediaKeys.h */,
 				3AC1EEB21A0719D800D762F2 /* MediaKeys.m */,
+				3AC1EEC21A07249500D762F2 /* WKWebView+SoundCloud.h */,
+				3AC1EEC31A07249500D762F2 /* WKWebView+SoundCloud.m */,
 				3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */,
 				3AC1EE871A06F0DA00D762F2 /* MainMenu.xib */,
 				3AC1EE851A06F0DA00D762F2 /* Images.xcassets */,
@@ -331,6 +336,7 @@
 				3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */,
 				3AC1EEA71A06F50B00D762F2 /* WebWindowController.m in Sources */,
 				3AC1EEC11A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m in Sources */,
+				3AC1EEC41A07249500D762F2 /* WKWebView+SoundCloud.m in Sources */,
 				3AC1EE821A06F0DA00D762F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
