@@ -8,6 +8,7 @@
 
 #import <objc/runtime.h>
 #import "WKWebView+SoundCloud.h"
+#import "NSURL+SoundCloud.h"
 #import "SoundCloudTrackInfo.h"
 
 typedef NS_ENUM(NSInteger, SoundCloudKeyCode) {
@@ -45,14 +46,12 @@ static NSString * const SoundCloudTitleIsPlayingString = @"▶ ";
     return signal;
 }
 
-static NSString * const SoundCloudHost = @"soundcloud.com";
-
 - (RACSignal *)isSoundCloudURLSignal
 {
     RACSignal *signal = objc_getAssociatedObject(self, _cmd);
     if (!signal) {
         signal = [RACObserve(self, URL) map:^id(NSURL *URL) {
-            return @([URL.host rangeOfString:SoundCloudHost].location != NSNotFound);
+            return @(URL.isOnSoundCloudDomain);
         }];
         objc_setAssociatedObject(self, _cmd, signal, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }

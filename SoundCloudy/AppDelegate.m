@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "WebWindowController.h"
+#import "NSURL+SoundCloud.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://soundcloud.com"]];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL soundCloudHomePageURL]];
     self.windowController = [[WebWindowController alloc] initWithRequest:request];
     [self.windowController showWindow:nil];
 }
