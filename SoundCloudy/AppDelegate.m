@@ -7,20 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "WebWindowController.h"
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (nonatomic, strong) WebWindowController *windowController;
+
 @end
 
 @implementation AppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://soundcloud.com"]];
+    self.windowController = [[WebWindowController alloc] initWithRequest:request];
+    [self.windowController showWindow:nil];
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (void)applicationWillTerminate:(NSNotification *)notification
+{
+    
 }
 
 @end
