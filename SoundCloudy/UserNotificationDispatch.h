@@ -13,7 +13,7 @@
 
 - (instancetype)initWithTrackInfoSignal:(RACSignal *)trackInfoSignal notificationCenter:(NSUserNotificationCenter *)notificationCenter;
 
-@property (nonatomic, readonly) RACSignal *trackInfoSignal;
+@property (nonatomic, weak, readonly) RACSignal *trackInfoSignal;
 @property (nonatomic, readonly) NSUserNotificationCenter *notificationCenter;
 @property (nonatomic, readonly) RACSignal *skipTrackSignal;
 @property (nonatomic, readonly) RACSignal *viewTrackSignal;

@@ -12,7 +12,7 @@
 
 @interface UserNotificationDispatch () <NSUserNotificationCenterDelegate>
 
-@property (nonatomic, readwrite) RACSignal *trackInfoSignal;
+@property (nonatomic, weak, readwrite) RACSignal *trackInfoSignal;
 @property (nonatomic, readwrite) RACSubject *skipTrackSignal;
 @property (nonatomic, readwrite) RACSubject *viewTrackSignal;
 @property (nonatomic, readwrite) NSUserNotificationCenter *notificationCenter;
