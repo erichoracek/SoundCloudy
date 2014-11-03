@@ -37,11 +37,11 @@
     [self bindMediaKeys:[MediaKeys sharedInstance] toWebView:self.view];
     [self.view loadRequest:self.request];
     
-    [self.view.isSoundCloudURL subscribeNext:^(id x) {
+    [self.view.isSoundCloudURLSignal subscribeNext:^(id x) {
         NSLog(@"is sound cloud %@", x);
     }];
     
-    [self.view.isPlaying subscribeNext:^(id x) {
+    [self.view.isPlayingSignal subscribeNext:^(id x) {
         NSLog(@"is playing %@", x);
     }];
 }

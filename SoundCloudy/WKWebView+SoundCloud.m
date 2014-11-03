@@ -28,11 +28,11 @@ static NSString * const SoundCloudKeydownJavaScript = @"\
 
 static NSString * const SoundCloudTitleIsPlayingCharacter = @"▶";
 
-- (RACSignal *)isPlaying
+- (RACSignal *)isPlayingSignal
 {
     RACSignal *signal = objc_getAssociatedObject(self, _cmd);
     if (!signal) {
-        signal = [RACSignal combineLatest:@[RACObserve(self, title), self.isSoundCloudURL] reduce:^id(NSString *title, NSNumber *isSoundCloudURL){
+        signal = [RACSignal combineLatest:@[RACObserve(self, title), self.isSoundCloudURLSignal] reduce:^id(NSString *title, NSNumber *isSoundCloudURL){
             return @(
                 [isSoundCloudURL boolValue]
                 && ([title rangeOfString:SoundCloudTitleIsPlayingCharacter].location != NSNotFound)
@@ -45,7 +45,7 @@ static NSString * const SoundCloudTitleIsPlayingCharacter = @"▶";
 
 static NSString * const SoundCloudHost = @"soundcloud.com";
 
-- (RACSignal *)isSoundCloudURL
+- (RACSignal *)isSoundCloudURLSignal
 {
     RACSignal *signal = objc_getAssociatedObject(self, _cmd);
     if (!signal) {
@@ -81,7 +81,7 @@ static NSString * const SoundCloudHost = @"soundcloud.com";
 
 - (void)evaluateJavaScriptForKeyCode:(SoundCloudKeyCode)keyCode
 {
-    if (self.isSoundCloudURL) {
+    if (self.isSoundCloudURLSignal) {
         [self evaluateJavaScript:[self keydownJavaScriptForKeyCode:keyCode] completionHandler:nil];
     }
 }

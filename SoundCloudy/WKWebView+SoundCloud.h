@@ -11,8 +11,8 @@
 
 @interface WKWebView (SoundCloud)
 
-@property (nonatomic, readonly) RACSignal *isPlaying;
-@property (nonatomic, readonly) RACSignal *isSoundCloudURL;
+@property (nonatomic, readonly) RACSignal *isPlayingSignal;
+@property (nonatomic, readonly) RACSignal *isSoundCloudURLSignal;
 
 - (void)play;
 - (void)next;
