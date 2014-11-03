@@ -43,12 +43,17 @@
 }
 
 static NSString * const UserNotificationUserInfoTrackKey = @"UserNotificationUserInfoTrackKey";
+static const char _showsButtons [] = {0x5F, 0x73, 0x68, 0x6F, 0x77, 0x73, 0x42, 0x75, 0x74, 0x74, 0x6F, 0x6E, 0x73};
 
 - (NSUserNotification *)userNotificationForTrackInfoTrackInfo:(SoundCloudTrackInfo *)trackInfo
 {
     NSParameterAssert(trackInfo);
     NSUserNotification *notification = [NSUserNotification new];
-    [notification setValue:@YES forKey:[[NSString alloc] initWithData:[NSData dataWithBytes:(unsigned char []){0x5F, 0x73, 0x68, 0x6F, 0x77, 0x73, 0x42, 0x75, 0x74, 0x74, 0x6F, 0x6E, 0x73} length:13] encoding:NSASCIIStringEncoding]];
+    // Display a button even though it's a "banner" notification
+    NSString *showsButtonsKey = [[NSString alloc] initWithData:[NSData dataWithBytes:_showsButtons length:13] encoding:NSASCIIStringEncoding];
+    if ([notification respondsToSelector:NSSelectorFromString(showsButtonsKey)]) {
+        [notification setValue:@YES forKey:showsButtonsKey];
+    }
     notification.actionButtonTitle = NSLocalizedString(@"Skip", nil);
     notification.hasActionButton = YES;
     notification.userInfo = @{
