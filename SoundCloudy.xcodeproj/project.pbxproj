@@ -16,7 +16,6 @@
 		3AC1EEA31A06F4A600D762F2 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEA11A06F4A600D762F2 /* WebViewController.m */; };
 		3AC1EEA71A06F50B00D762F2 /* WebWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEA61A06F50B00D762F2 /* WebWindowController.m */; };
 		3AC1EEA91A06F5B600D762F2 /* WebWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */; };
-		3AC1EEAC1A07064700D762F2 /* SpaceKeySignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */; };
 		3AC1EEAF1A070F1500D762F2 /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEB21A0719D800D762F2 /* MediaKeys.m */; };
 		3AC1EEC11A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -54,8 +53,6 @@
 		3AC1EEA51A06F50B00D762F2 /* WebWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebWindowController.h; sourceTree = "<group>"; };
 		3AC1EEA61A06F50B00D762F2 /* WebWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebWindowController.m; sourceTree = "<group>"; };
 		3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebWindow.xib; sourceTree = "<group>"; };
-		3AC1EEAA1A07064700D762F2 /* SpaceKeySignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceKeySignal.h; sourceTree = "<group>"; };
-		3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceKeySignal.m; sourceTree = "<group>"; };
 		3AC1EEAD1A070F1500D762F2 /* SPMediaKeyTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPMediaKeyTap.h; path = Vendor/SPMediaKeyTap/SPMediaKeyTap.h; sourceTree = "<group>"; };
 		3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPMediaKeyTap.m; path = Vendor/SPMediaKeyTap/SPMediaKeyTap.m; sourceTree = "<group>"; };
 		3AC1EEB11A0719D800D762F2 /* MediaKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaKeys.h; sourceTree = "<group>"; };
@@ -137,8 +134,6 @@
 				3AC1EEA11A06F4A600D762F2 /* WebViewController.m */,
 				3AD1EECD1A07570200806C01 /* UserNotificationDispatch.h */,
 				3AD1EECE1A07570200806C01 /* UserNotificationDispatch.m */,
-				3AC1EEAA1A07064700D762F2 /* SpaceKeySignal.h */,
-				3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */,
 				3AC1EEB11A0719D800D762F2 /* MediaKeys.h */,
 				3AC1EEB21A0719D800D762F2 /* MediaKeys.m */,
 				3AC1EEC21A07249500D762F2 /* WKWebView+SoundCloud.h */,
@@ -357,7 +352,6 @@
 				3AC1EE841A06F0DA00D762F2 /* main.m in Sources */,
 				3AC1EEAF1A070F1500D762F2 /* SPMediaKeyTap.m in Sources */,
 				3AD1EED21A07574300806C01 /* SoundCloudTrackInfo.m in Sources */,
-				3AC1EEAC1A07064700D762F2 /* SpaceKeySignal.m in Sources */,
 				3AC1EEA31A06F4A600D762F2 /* WebViewController.m in Sources */,
 				3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */,
 				3AD1EECF1A07570200806C01 /* UserNotificationDispatch.m in Sources */,
