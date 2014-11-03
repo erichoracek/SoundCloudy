@@ -17,6 +17,9 @@
 		3AC1EEA71A06F50B00D762F2 /* WebWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEA61A06F50B00D762F2 /* WebWindowController.m */; };
 		3AC1EEA91A06F5B600D762F2 /* WebWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */; };
 		3AC1EEAC1A07064700D762F2 /* SpaceKeySignal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */; };
+		3AC1EEAF1A070F1500D762F2 /* SPMediaKeyTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEB21A0719D800D762F2 /* MediaKeys.m */; };
+		3AC1EEC11A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		B3A73C21CAC39B4361F1427E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 815BA2C5C15D3A2C0389F8E3 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,12 @@
 		3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebWindow.xib; sourceTree = "<group>"; };
 		3AC1EEAA1A07064700D762F2 /* SpaceKeySignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpaceKeySignal.h; sourceTree = "<group>"; };
 		3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpaceKeySignal.m; sourceTree = "<group>"; };
+		3AC1EEAD1A070F1500D762F2 /* SPMediaKeyTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPMediaKeyTap.h; path = Vendor/SPMediaKeyTap/SPMediaKeyTap.h; sourceTree = "<group>"; };
+		3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPMediaKeyTap.m; path = Vendor/SPMediaKeyTap/SPMediaKeyTap.m; sourceTree = "<group>"; };
+		3AC1EEB11A0719D800D762F2 /* MediaKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaKeys.h; sourceTree = "<group>"; };
+		3AC1EEB21A0719D800D762F2 /* MediaKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaKeys.m; sourceTree = "<group>"; };
+		3AC1EEBC1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SPInvocationGrabbing.h"; sourceTree = "<group>"; };
+		3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SPInvocationGrabbing.m"; sourceTree = "<group>"; };
 		4399309A454A4BC59E8D8879 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		815BA2C5C15D3A2C0389F8E3 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA80D07456FA5BA46CD167A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +98,7 @@
 				3AC1EE9E1A06F3FB00D762F2 /* WebKit.framework */,
 				3AC1EE7D1A06F0DA00D762F2 /* SoundCloudy */,
 				3AC1EE911A06F0DB00D762F2 /* SoundCloudyTests */,
+				3AC1EEB01A070F9000D762F2 /* SPMediaKeyTap */,
 				3AC1EE7C1A06F0DA00D762F2 /* Products */,
 				24FD4B0ABD58B63B539E24D3 /* Pods */,
 				EEF0C97ACE1CC5575DD36753 /* Frameworks */,
@@ -115,6 +125,8 @@
 				3AC1EEA11A06F4A600D762F2 /* WebViewController.m */,
 				3AC1EEAA1A07064700D762F2 /* SpaceKeySignal.h */,
 				3AC1EEAB1A07064700D762F2 /* SpaceKeySignal.m */,
+				3AC1EEB11A0719D800D762F2 /* MediaKeys.h */,
+				3AC1EEB21A0719D800D762F2 /* MediaKeys.m */,
 				3AC1EEA81A06F5B600D762F2 /* WebWindow.xib */,
 				3AC1EE871A06F0DA00D762F2 /* MainMenu.xib */,
 				3AC1EE851A06F0DA00D762F2 /* Images.xcassets */,
@@ -147,6 +159,26 @@
 				3AC1EE931A06F0DB00D762F2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3AC1EEB01A070F9000D762F2 /* SPMediaKeyTap */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1EEB81A07210C00D762F2 /* SPInvocationGrabbing */,
+				3AC1EEAD1A070F1500D762F2 /* SPMediaKeyTap.h */,
+				3AC1EEAE1A070F1500D762F2 /* SPMediaKeyTap.m */,
+			);
+			name = SPMediaKeyTap;
+			sourceTree = "<group>";
+		};
+		3AC1EEB81A07210C00D762F2 /* SPInvocationGrabbing */ = {
+			isa = PBXGroup;
+			children = (
+				3AC1EEBC1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.h */,
+				3AC1EEBD1A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m */,
+			);
+			name = SPInvocationGrabbing;
+			path = Vendor/SPMediaKeyTap/SPInvocationGrabbing;
 			sourceTree = "<group>";
 		};
 		EEF0C97ACE1CC5575DD36753 /* Frameworks */ = {
@@ -293,9 +325,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC1EE841A06F0DA00D762F2 /* main.m in Sources */,
+				3AC1EEAF1A070F1500D762F2 /* SPMediaKeyTap.m in Sources */,
 				3AC1EEAC1A07064700D762F2 /* SpaceKeySignal.m in Sources */,
 				3AC1EEA31A06F4A600D762F2 /* WebViewController.m in Sources */,
+				3AC1EEB31A0719D800D762F2 /* MediaKeys.m in Sources */,
 				3AC1EEA71A06F50B00D762F2 /* WebWindowController.m in Sources */,
+				3AC1EEC11A07210C00D762F2 /* NSObject+SPInvocationGrabbing.m in Sources */,
 				3AC1EE821A06F0DA00D762F2 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
