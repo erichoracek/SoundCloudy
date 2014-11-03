@@ -9,7 +9,6 @@
 #import <WebKit/WebKit.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 #import "WebViewController.h"
-#import "SpaceKeySignal.h"
 #import "WKWebView+SoundCloud.h"
 #import "MediaKeys.h"
 #import "SoundCloudTrackInfo.h"
@@ -18,7 +17,6 @@
 @interface WebViewController ()
 
 @property (nonatomic, readwrite) NSURLRequest *request;
-@property (nonatomic) SpaceKeySignal *spaceKeySignal;
 @property (nonatomic) UserNotificationDispatch *userNotificationDispatch;
 
 
@@ -31,7 +29,6 @@
 - (void)loadView
 {
     self.view = [WKWebView new];
-    self.spaceKeySignal = [SpaceKeySignal new];
 }
 
 - (void)viewDidLoad
