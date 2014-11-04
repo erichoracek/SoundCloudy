@@ -7,6 +7,7 @@
 //
 
 #import <Sparkle/Sparkle.h>
+#import <LetsMove/PFMoveApplication.h>
 #import "AppDelegate.h"
 #import "WebWindowController.h"
 #import "WebViewController.h"
@@ -23,6 +24,13 @@
 @implementation AppDelegate
 
 #pragma mark - AppDelegate <NSApplicationDelegate>
+
+- (void)applicationWillFinishLaunching:(NSNotification *)notification
+{
+#ifndef DEBUG
+    PFMoveToApplicationsFolderIfNecessary();
+#endif
+}
 
 - (void)applicationDidFinishLaunching:(NSNotification *)notification
 {

@@ -1,4 +1,5 @@
 PODS:
+  - LetsMove (1.9)
   - ReactiveCocoa (2.3.1):
     - ReactiveCocoa/UI
   - ReactiveCocoa/Core (2.3.1):
@@ -9,10 +10,12 @@ PODS:
   - Sparkle (1.8.0)
 
 DEPENDENCIES:
+  - LetsMove
   - ReactiveCocoa
   - Sparkle
 
 SPEC CHECKSUMS:
+  LetsMove: 9554c194d1378c89909fd66005cf7a662f43932d
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
   Sparkle: 5eb20bb37ca21e471dab8417dee880198d905327
 
