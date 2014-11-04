@@ -6,11 +6,14 @@ PODS:
   - ReactiveCocoa/no-arc (2.3.1)
   - ReactiveCocoa/UI (2.3.1):
     - ReactiveCocoa/Core
+  - Sparkle (1.8.0)
 
 DEPENDENCIES:
   - ReactiveCocoa
+  - Sparkle
 
 SPEC CHECKSUMS:
   ReactiveCocoa: dca75777b9d18990c8714a3a6f2149f29b4d1462
+  Sparkle: 5eb20bb37ca21e471dab8417dee880198d905327
 
 COCOAPODS: 0.34.4
