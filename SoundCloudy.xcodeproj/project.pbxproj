@@ -104,7 +104,6 @@
 		3AC1EE721A06F0DA00D762F2 = {
 			isa = PBXGroup;
 			children = (
-				3AC1EE9E1A06F3FB00D762F2 /* WebKit.framework */,
 				3AC1EE7D1A06F0DA00D762F2 /* SoundCloudy */,
 				3AC1EE911A06F0DB00D762F2 /* SoundCloudyTests */,
 				3AD1EED31A077CEC00806C01 /* Vendor */,
@@ -207,6 +206,7 @@
 		EEF0C97ACE1CC5575DD36753 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3AC1EE9E1A06F3FB00D762F2 /* WebKit.framework */,
 				815BA2C5C15D3A2C0389F8E3 /* libPods.a */,
 			);
 			name = Frameworks;
