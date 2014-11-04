@@ -1,26 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <channel>
-    <title>SoundCloudy Changelog</title>
-    <link>https://raw.githubusercontent.com/erichoracek/SoundCloudy/master/Sparkle/appcast.xml</link>
-    <description>Most recent changes with links to updates.</description>
-    <language>en</language>
-    <item>
-      <title>Version 0.0.1</title>
-      <description>
-        <![CDATA[
-        <ul>
-          <li>Let's see how this goes.</li>
-        </ul>
-        ]]>
-      </description>
-      <pubDate>Mon, 3 Nov 2014 10:20:11 +0000</pubDate>
-      <enclosure
-        url="https://github.com/erichoracek/SoundCloudy/archive/0.0.1.zip"
-        sparkle:version="1"
-        sparkle:shortVersionString="0.0.1"
-        type="application/octet-stream"
-      />
-      </item>
+<rss
+    version="2.0"
+    xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+>
+    <channel>
+        <title>SoundCloudy Changelog</title>
+        <link>https://raw.githubusercontent.com/erichoracek/SoundCloudy/master/Sparkle/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 0.0.1</title>
+            <description>
+                <![CDATA[
+                    <ul>
+                    <li>Let's see how this goes.</li>
+                    </ul>
+                ]]>
+            </description>
+            <pubDate>Mon, 3 Nov 2014 10:20:11 +0000</pubDate>
+            <enclosure
+                url="https://github.com/erichoracek/SoundCloudy/archive/0.0.1.zip"
+                sparkle:version="1"
+                sparkle:shortVersionString="0.0.1"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
+            <title>Version 0.0.2</title>
+            <description>
+                <![CDATA[
+                    <ul>
+                    <li>Let's see how this goes.</li>
+                    </ul>
+                ]]>
+            </description>
+            <pubDate>Mon, 3 Nov 2014 10:22:11 +0000</pubDate>
+            <enclosure
+                url="https://github.com/erichoracek/SoundCloudy/archive/0.0.2.zip"
+                sparkle:version="2"
+                sparkle:shortVersionString="0.0.2"
+                type="application/octet-stream"
+            />
+        </item>
     </channel>
-  </rss>
+</rss>
