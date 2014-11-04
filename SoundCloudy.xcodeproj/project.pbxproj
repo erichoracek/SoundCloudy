@@ -224,6 +224,7 @@
 				3AC1EE781A06F0DA00D762F2 /* Frameworks */,
 				3AC1EE791A06F0DA00D762F2 /* Resources */,
 				BDF0D9066ACE7D3362DABAE7 /* Copy Pods Resources */,
+				3AD78CC51A088FFA00B1579A /* Sign Sparkle.framework */,
 			);
 			buildRules = (
 			);
@@ -311,6 +312,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3AD78CC51A088FFA00B1579A /* Sign Sparkle.framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Sign Sparkle.framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "LOCATION=\"${BUILT_PRODUCTS_DIR}\"/\"${FRAMEWORKS_FOLDER_PATH}\"\nIDENTITY=\"Developer ID Application: Eric Horacek\"\ncodesign --verbose --force --sign \"$IDENTITY\" \"$LOCATION/Sparkle.framework/Versions/A\"";
+		};
 		BDF0D9066ACE7D3362DABAE7 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
