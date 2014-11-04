@@ -20,7 +20,7 @@
             </description>
             <pubDate>Mon, 3 Nov 2014 10:20:11 +0000</pubDate>
             <enclosure
-                url="https://github.com/erichoracek/SoundCloudy/archive/0.0.1.zip"
+                url="https://github.com/erichoracek/SoundCloudy/releases/download/0.0.1/SoundCloudy.zip"
                 sparkle:version="1"
                 sparkle:shortVersionString="0.0.1"
                 type="application/octet-stream"
@@ -37,7 +37,7 @@
             </description>
             <pubDate>Mon, 3 Nov 2014 10:22:11 +0000</pubDate>
             <enclosure
-                url="https://github.com/erichoracek/SoundCloudy/archive/0.0.2.zip"
+                url="https://github.com/erichoracek/SoundCloudy/releases/download/0.0.2/SoundCloudy.zip"
                 sparkle:version="2"
                 sparkle:shortVersionString="0.0.2"
                 type="application/octet-stream"
