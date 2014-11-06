@@ -1,5 +1,5 @@
 //
-//  SpaceKeySignal.h
+//  SpaceKeyCommand.h
 //  SoundCloudy
 //
 //  Created by Eric Horacek on 11/2/14.
