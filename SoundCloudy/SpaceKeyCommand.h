@@ -8,6 +8,6 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface SpaceKeySignal : RACSubject
+@interface SpaceKeyCommand : RACCommand
 
 @end

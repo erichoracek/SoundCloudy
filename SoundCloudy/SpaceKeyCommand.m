@@ -8,19 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/RACEXTScope.h>
-#import "SpaceKeySignal.h"
+#import "SpaceKeyCommand.h"
 
-@interface SpaceKeySignal ()
+@interface SpaceKeyCommand ()
 
 @property (nonatomic) id monitor;
 
 @end
 
-@implementation SpaceKeySignal
+@implementation SpaceKeyCommand
 
-- (instancetype)init
+- (instancetype)initWithEnabled:(RACSignal *)enabledSignal signalBlock:(RACSignal *(^)(id))signalBlock
 {
-    self = [super init];
+    self = [super initWithEnabled:enabledSignal signalBlock:signalBlock];
     if (self) {
         @weakify(self);
         self.monitor = [NSEvent addLocalMonitorForEventsMatchingMask:NSKeyDownMask handler:^NSEvent *(NSEvent *event) {
@@ -42,7 +42,7 @@ static unsigned short const SpaceKeyCode = 49;
 - (void)handleKeyDownEvent:(NSEvent *)event;
 {
     if (event.keyCode == SpaceKeyCode) {
-        [self sendNext:event];
+        [self execute:event];
     }
 }
 
